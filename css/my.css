@@ -1,0 +1,12 @@
+.shadow {
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+.transparent {
+  background:rgba(0,0,0,0.5);
+}
+i.tam-icon {
+  font-size: 90px;
+}
+.text {
+  font-size: 12px;
+}
