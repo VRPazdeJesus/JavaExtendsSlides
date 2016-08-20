@@ -10,3 +10,9 @@ i.tam-icon {
 .text {
   font-size: 12px;
 }
+.reference {
+  font-size: small;
+}
+.image {
+  height: 230px;
+}
