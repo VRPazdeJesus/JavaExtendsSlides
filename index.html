@@ -754,6 +754,7 @@
 									public void ligar (int volume, int canal) {
 										this.volume = volume;
 										this.canal = canal;
+									}
 								}
 								```
 								- Os parâmetros devem sempre ser de tipos diferentes, ou quantidades de parâmetros diferentes ou posições dos tipos diferentes.
@@ -815,6 +816,7 @@
 									public static int resultado(int num1, int num2){
 										return (num1 + num2);
 									}
+								}
 								```
 							</script>
 						</section>
@@ -937,10 +939,571 @@
 							</script>
 						</section>
 
+						<section data-background="image/reference.jpg" class="transparent">
+							<h2 class="shadow"><i>Até breve!</i></h2>
+						</section>
+
 					</section>
 
-					<section data-background="image/reference.jpg" class="transparent">
-						<h2 class="shadow"><i>Até breve!</i></h2>
+					<section data-background="image/space.jpg">
+						<h2 class="shadow">Episódio 03</h2>
+						<p class="shadow">
+							<i>"Trabalhando com condicionais e laços"</i>
+						</p>
+					</section>
+
+					<section data-background="image/rocky-planet.jpg">
+						<section>
+							<h1 class="shadow"><i>Sobrecarga de método</i></h1>
+						</section>
+
+						<section class="transparent" data-background="image/rocky-planet.jpg">
+							<h2 class="shadow"><i>Sobrecarga de método</i></h2>
+							<h4 class="shadow">Overloading</h4>
+						  <p class="shadow">
+								Ocorre quando temos métodos com mesmo nome, mas parâmetros diferentes.
+							</p>
+							<p class="shadow">
+								Ela é importante para quando quisermos o mesmo método com possibilidades de entradas diferentes.
+							</p>
+						</section>
+
+						<section data-markdown data-background="image/rocky-planet.jpg" class="transparent">
+							<script type="text/template">
+								## Classe Pessoa
+
+								```
+								public class Pessoa {
+									String nome;
+									int anosVida;
+									float dinheiro;
+
+									public void felicidade (float dinheiro) {
+										this.dinheiro += dinheiro;
+									}
+
+									public void felicidade (int amor) {
+										this.anosVida += amor*10;
+									}
+
+									public void felicidade (float dinheiro, int anosVida) {
+										this.anosVida += anosVida;
+										this.dinheiro += dinheiro;
+									}
+
+									public void felicidade (int anosVida, float dinheiro) {
+										this.anosVida += anosVida;
+										this.dinheiro += dinheiro;
+									}
+								}
+								```
+								- Os parâmetros devem sempre ser de tipos diferentes, ou quantidades de parâmetros diferentes ou posições dos tipos diferentes.
+							</script>
+						</section>
+
+						<section class="transparent">
+							<h2 class="shadow"><i>Sobrecarga de método</i></h2>
+							<h4 class="shadow">Overloading</h4>
+							<blockquote>
+								&ldquo;Para que seja permititda a sobrecarga, os nomes dos métodos devem ser iguais, mas as assinaturas devem ser diferentes.&rdquo;
+							</blockquote>
+						</section>
+
+					</section>
+
+					<section data-background="image/fantasy-planet.jpg">
+						<section>
+							<h1 class="shadow"><i>Booleanos</i></h1>
+							<p class="shadow">
+								É um tipo de dado que permite apenas dois valores, true (verdadeiro) ou false (false).
+							</p>
+						</section>
+
+						<section data-markdown class="transparent">
+							<script type="text/template">
+								## Booleanos
+								Na linguagem C podemos considerar 0 (zero) e 1 (um) como falso e verdadeiro de uma variável booleana.
+								```
+								//Linguagem C
+								main() {
+
+									int x=1;
+									
+									while(x){
+
+										código
+
+									}
+								}
+								```
+							</script>
+						</section>
+
+						<section data-markdown class="transparent">
+							<script type="text/template">
+								## Booleanos
+								Em Java, Booleanos e Inteiros não são tipos compatíveis.
+								```
+								//Linguagem Java
+								public class Exemplo {
+
+									public static void main (String[] args) {
+
+										boolean x = true;
+
+										while (x) {
+
+											código
+
+										}
+
+									}
+
+								}
+								```
+							</script>
+						</section>
+
+					</section>
+
+					<section data-background="image/firePlanet.jpg">
+						<section>
+							<h1 class="shadow"><i>Condicionais</i></h1>
+						</section>
+
+						<section class="transparent">
+							<h1 class="shadow"><i>IF...ELSE</i></h1>
+						</section>
+
+						<section data-markdown data-background="image/firePlanet.jpg" class="transparent">
+							<script type="text/template">
+								## IF...ELSE
+								```
+								public class Exemplo {
+
+									public static void main (String[] args) {
+
+										//o if...else
+										if(condição){
+											/* o que ficar aqui dentro será executado
+											se a condição for verdadeira */
+										} else {
+											/* se a condição que está no if for falsa
+											será executado o que está aqui dentro */
+										}
+
+									}
+
+								}
+								```
+							</script>
+						</section>
+
+						<section class="transparent" data-markdown data-background="image/firePlanet.jpg">
+							<script type="text/template">
+								## IF...ELSE
+								```
+								import java.io.*;
+								import java.util.Scanner;
+
+								public class Exemplo {
+
+									public static void main (String[] args) {
+										int idade;
+										Scanner entrada = new Scanner(System.in);
+
+										System.out.println("Informe sua idade");
+										idade = entrada.nextInt();
+
+										if(idade >= 18){
+											System.out.println("Você é maior de idade");
+										} else {
+											System.out.println("Você é menor de idade");
+										}
+
+									}
+
+								}
+								```
+							</script>
+						</section>
+
+						<section class="transparent">
+							<h2 class="shadow"><i>Operador Condicional Ternário</i></h2>
+							<blockquote>
+								&ldquo;O operador ternário "?:" é um modo simples de fazer teste condicional, substituindo o if...else.
+								Ele sempre vai retornar uma expressão.&rdquo;
+							</blockquote>
+						</section>
+
+						<section class="transparent" data-markdown data-background="image/firePlanet.jpg">
+							<script type="text/template">
+								## OPERADOR TERNÁRIO
+								```
+								import java.io.*;
+								import java.util.Scanner;
+
+								public class Exemplo {
+
+									public static void main (String[] args) {
+										int idade;
+										Scanner entrada = new Scanner(System.in);
+
+										System.out.println("Informe sua idade");
+										idade = entrada.nextInt();
+
+										// (expressão) ? valorParaCasoVerdadeiro : valorParaCasoFalso;
+
+										String n = (idade >= 18) ? "Você é maior de idade" : "Você é menor de idade";
+										System.out.println(n);
+										// OU
+										System.out.println((idade >= 18) ? "Você é maior de idade" : "Você é menor de idade");
+
+									}
+
+								}
+								```
+							</script>
+						</section>
+
+						<section class="transparent">
+							<h2 class="shadow"><i>SWITCH</i></h2>
+							<blockquote>
+								&ldquo;Permite criarmos vários tipos de casos dependendo do resultado da condição.&rdquo;
+							</blockquote>
+						</section>
+
+						<section class="transparent" data-markdown data-background="image/firePlanet.jpg">
+							<script type="text/template">
+								## SWITCH
+								```
+								import java.io.*;
+
+								public class Exemplo {
+
+									public static void main (String[] args) {
+
+										switch( opção ){
+											case opção1:
+												comandos caso a opção 1 tenha sido escolhida
+												break;
+
+											case opção2:
+												comandos caso a opção 2 tenha sido escolhida
+												break;
+
+											case opção3:
+												comandos caso a opção 3 tenha sido escolhida
+												break;
+
+											default:
+												comandos caso nenhuma das opções anteriores tenha sido escolhida
+										}
+
+									}
+
+								}
+								```
+							</script>
+						</section>
+
+						<section class="transparent" data-markdown data-background="image/firePlanet.jpg">
+							<script type="text/template">
+								## SWITCH
+								```
+								import java.io.*;
+								import java.util.Scanner;
+
+								public class Exemplo {
+
+									public static void main (String[] args) {
+
+										int opcao;
+										Scanner entrada = new Scanner(System.in);
+										System.out.println("Digite um número de 1 a 7");
+										opcao = entrada.nextInt();
+
+										switch( opcao ){
+											case 1:
+												System.out.println("Domingo");
+												break;
+
+											case 2:
+												System.out.println("Segunda-feira");
+												break;
+
+											case 3:
+												System.out.println("Terça-feira");
+												break;
+
+											case 4:
+												System.out.println("Quarta-feira");
+												break;
+
+											case 5:
+												System.out.println("Quinta-feira");
+												break;
+
+											case 6:
+												System.out.println("Sexta-feira");
+												break;
+
+											case 7:
+												System.out.println("Sábado");
+												break;
+
+											default:
+												System.out.println("Dia inválido!");
+										}
+
+									}
+
+								}
+								```
+							</script>
+						</section>
+
+						<section class="transparent">
+							<h2 class="shadow"><i>SWITCH</i></h2>
+							<h4>O "break"</h4>
+							<blockquote>
+								&ldquo;Só é realizado um 'case' de cada vez por conta do 'break' contido em cada comando dentro dos 'case'.&rdquo;
+							</blockquote>
+							<blockquote>
+								Se retirarmos o break de dentro dos cases, o switch quando selecionar um 'case', vai executar o 'case'
+								 selecionado e todos os outros 'cases' abaixo.
+							</blockquote>
+						</section>
+
+						<section class="transparent" data-markdown data-background="image/firePlanet.jpg">
+							<script type="text/template">
+								## SWITCH
+								```
+								import java.io.*;
+								import java.util.Scanner;
+
+								public class Exemplo {
+
+									public static void main (String[] args) {
+
+										int opcao;
+										Scanner entrada = new Scanner(System.in);
+										System.out.println("Digite um número de 1 a 7");
+										opcao = entrada.nextInt();
+
+										switch( opcao ){
+											case 1:
+												System.out.println("Domingo");
+
+											case 2:
+												System.out.println("Segunda-feira");
+
+											case 3:
+												System.out.println("Terça-feira");
+
+											case 4:
+												System.out.println("Quarta-feira");
+
+											case 5:
+												System.out.println("Quinta-feira");
+
+											case 6:
+												System.out.println("Sexta-feira");
+
+											case 7:
+												System.out.println("Sábado");
+
+											default:
+												System.out.println("Dia inválido!");
+										}
+
+									}
+
+								}
+								```
+							</script>
+						</section>
+
+					</section>
+
+					<section data-background="image/twoEarth.jpg">
+						<section>
+							<h1 class="shadow"><i>Iterações</i></h1>
+						</section>
+
+						<section class="transparent">
+							<p class="shadow">
+								<i>São laços, onde cada ciclo de repetição é chamado de iteração.</i>
+							</p>
+						</section>
+
+						<section data-background="image/close-planet.jpg" class="transparent">
+							<h1 class="shadow"><i>While</i></h1>
+						</section>
+
+						<section data-markdown data-background="image/close-planet.jpg" class="transparent">
+							<script type="text/template">
+								## While
+								```
+								import java.io.*;
+								public class MinhaClasse {
+									public static void main (String[] args) {
+
+										//cada ciclo (volta) é chamado de iteração
+										while ( condição ){
+											códigos
+										}
+
+									}
+								}
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/close-planet.jpg" class="transparent">
+							<script type="text/template">
+								## While
+								```
+								public class MinhaClasse {
+									public static void main (String[] args) {
+
+										int i=0;
+
+										while (i<= 10) {
+											System.out.println(i);
+											i++;
+										}
+
+									}
+								}
+								```
+							</script>
+						</section>
+
+						<section data-background="image/close-planet.jpg" class="transparent">
+							<h1 class="shadow"><i>For</i></h1>
+						</section>
+
+						<section data-markdown data-background="image/close-planet.jpg" class="transparent">
+							<script type="text/template">
+								## For
+								```
+								public class MinhaClasse {
+									public static void main (String[] args) {
+
+										for(condiçãoInicial; condiçãoDoLaço ; decrementoOUincremento){
+
+											códigos
+
+										}
+
+									}
+								}
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/close-planet.jpg" class="transparent">
+							<script type="text/template">
+								## For
+								```
+								public class MinhaClasse {
+									public static void main (String[] args) {
+
+										for(int i=0; i<=10 ; i++){
+
+											System.out.println(i);
+
+										}
+
+									}
+								}
+								```
+							</script>
+						</section>
+
+						<section class="transparent" data-background="image/close-planet.jpg">
+							<h1 class="shadow"><i>do...while</i></h1>
+						</section>
+
+						<section class="transparent" data-background="image/close-planet.jpg">
+							<p class="shadow">
+								<i>Sempre executa o código do laço pelo menos uma vez, independente da condição do while ser true ou false.</i>
+							</p>
+						</section>
+
+						<section data-markdown data-background="image/close-planet.jpg" class="transparent">
+							<script type="text/template">
+								## DO...WHILE
+								```
+								public class MinhaClasse {
+									public static void main (String[] args) {
+
+										do{
+											//esse código será executado pelo menos uma vez
+										} while( condição );
+
+									}
+								}
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/close-planet.jpg" class="transparent">
+							<script type="text/template">
+								## DO...WHILE
+								```
+								import java.io.*;
+								import java.util.Scanner;
+
+								public class MinhaClasse {
+									public static void main (String[] args) {
+
+										boolean continua = true;
+										int opcao;
+										Scanner entrada = new Scanner(System.in);
+
+										do {
+											System.out.println("Oi! Para sair aperte 0");
+											opcao = entrada.nextInt();
+											if(opcao==0){
+												continua=false;
+											}
+
+										}while(continua);
+
+									}
+								}
+								```
+							</script>
+						</section>
+
+
+						<section data-markdown data-background="image/close-planet.jpg" class="transparent">
+							<script type="text/template">
+								## Operadores
+								```
+								//Operadores Lógicos
+								&& ( e )
+								|| ( or )
+								! (não lógico)
+
+								//Operadores Relacionais
+								< (menor)
+								> (maior)
+								<= (menor igual)
+								>= (maior igual)
+								== (igual)
+								!= (diferente)
+
+								```
+							</script>
+						</section>
+
+						<section data-background="image/reference.jpg" class="transparent">
+							<h2 class="shadow"><i>Até a próxima semana!</i></h2>
+						</section>
+
 					</section>
 
 			</div>
