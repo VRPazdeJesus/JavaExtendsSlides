@@ -1028,7 +1028,7 @@
 								main() {
 
 									int x=1;
-									
+
 									while(x){
 
 										código
@@ -1505,6 +1505,434 @@
 						</section>
 
 					</section>
+
+					<section data-background="image/space.jpg">
+						<h2 class="shadow">Episódio 04</h2>
+						<p class="shadow">
+							<i>"Trabalhando com Arrays e String"</i>
+						</p>
+					</section>
+
+					<section>
+						<section data-background="image/desbravador.gif">
+							<h1 class="shadow"><i>Desbravando o Array</i></h1>
+						</section>
+
+						<section data-background="image/newPlanet.jpg" class="transparent">
+							<blockquote>
+								&ldquo;Uma array é sempre um objeto! <br>
+								Os índices do array vão de 0 a n-1, onde n é o tamanho dado no
+								momento em que você criou o array..&rdquo;
+							</blockquote>
+						</section>
+
+						<section data-markdown data-background="image/newPlanet.jpg" class="transparent">
+							<script type="text/template">
+								## Array (vetor)
+								```
+								//Declaração do tipo
+								tipo [] nomeVariavel;
+
+								//Criando o objeto
+								nomeVariavel = new tipo[10];
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/newPlanet.jpg" class="transparent">
+							<script type="text/template">
+								## Array (vetor)
+								```
+								//Declaração do tipo
+								int [] vet;
+
+								//Criando o objeto
+								vet = new int[3];
+
+								//ou
+								int [] vet = new int[3];
+
+								//colocando valores dentro do array
+								vet[0] = 5;
+								vet[1] = 10;
+								vet[2] = 15;
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/newPlanet.jpg" class="transparent">
+							<script type="text/template">
+								## Array (vetor)
+								```
+								//Declaração do tipo
+								float [] meuVetor;
+
+								//Criando o objeto
+								meuVetor = new float[3];
+
+								//ou
+								float [] meuVetor = new float[3];
+
+								//colocando valores dentro do array
+								meuVetor[0] = 5.5;
+								meuVetor[1] = 10.5;
+								meuVetor[2] = 15.5;
+
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/newPlanet.jpg" class="transparent">
+							<script type="text/template">
+								## Array (vetor)
+								```
+								//Declaração do tipo
+								String [] meuVetor;
+
+								//Criando o objeto
+								meuVetor = new String[3];
+
+								//ou
+								String [] meuVetor = new String[3];
+
+								//colocando valores dentro do array
+								meuVetor[0] = "Pedro";
+								meuVetor[1] = "João";
+								meuVetor[2] = "Víctor";
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/newPlanet.jpg" class="transparent">
+							<script type="text/template">
+								## Percorrendo o Array
+								```
+								String [] meuVetor = new String[3];
+
+								//colocando valores dentro do array
+								meuVetor[0] = "Pedro";
+								meuVetor[1] = "João";
+								meuVetor[2] = "Víctor";
+
+								//imprimindo 1 posição específica
+								System.out.println(meuVetor[1]);
+
+								//imprimindo varias posições
+								for(int i=0; i < meuVetor.length; i++){
+									System.out.println(meuVetor[i]);
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-background="image/newPlanet.jpg" class="transparent">
+							<blockquote>
+								O tipo do array deve ser do mesmo tipo das informações que ele vai guardar.
+							</blockquote>
+						</section>
+
+						<section data-markdown data-background="image/newPlanet.jpg" class="transparent">
+							<script type="text/template">
+								## Passando Array por parâmetro
+								```
+								//classe principal
+								public class Exemplo {
+									public static void main (String[] args) {
+										int [] v = new int[10];
+										Objeto o = new Objeto();
+										o.lerArray(v);
+									}
+								}
+
+								```
+
+								```
+								//classe Objeto
+								public class Objeto{
+
+									public void lerArray(int[] v){
+										for(int i=0; i<v.length; i++){
+											System.out.println(v[i]);
+										}
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/newPlanet.jpg" class="transparent">
+							<script type="text/template">
+								## Inicializando com valores
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+
+										//Inicializando com valores
+										int[] idades = {21, 27, 24};
+
+										//Ou
+										int[] idades = new int[]{21, 27, 24};
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/newPlanet.jpg" class="transparent">
+							<script type="text/template">
+								## Vetor de Referência
+								#### É um array de objetos!
+								É um array onde ficarão as referências (endereço) dos objetos.
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+
+										NomeClasse[] nomeVetor = new NomeClasse[Numero];
+									}
+								}
+
+								```
+								Criamos um array de referência, quando criamos um array a partir da classe do
+								objeto que queremos guardar neste array.
+							</script>
+						</section>
+
+					</section>
+
+					<section>
+						<section data-background="image/ChgeueiNessaPorra.gif">
+							<h1 class="shadow"><i>String</i></h1>
+						</section>
+
+						<section data-background="image/mescla.jpg" class="transparent">
+							<blockquote>
+								Uma string é uma seqüência de caracteres, como "Hello, World!".
+								<br/>Em Java, strings ficam entre aspas.
+							</blockquote>
+							<h4 class="fragment fade-up">Diferentemente dos números, strings são objetos.</h4>
+							<h4 class="fragment fade-up">As aspas não são parte da string.</h4>
+							<h4 class="fragment fade-up">Strings também são objetos.</h4>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								##String
+								String é uma classe em Java. <br/>
+								Podemos criar uma String utilizando o new :
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String x = new String("Victor");
+										String y = new String("Vitor");
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								##Comparação de String
+								Para comparação de string utiliza-se o método "equals".
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String x = new String("Victor");
+										String y = new String("Vitor");
+
+										if (x.equals(y)) {
+											System.out.println("São iguais");
+										}
+										else {
+											System.out.println("São diferentes");
+										}
+
+										//equalIgnoreCase
+
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								## Comprimento da String
+								Podemos calcular o tamanho da String com o método "length".
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String mensagem = "Oi!";
+										int n = mensagem.length();
+										System.out.println(n);
+
+										//Uma String vazia
+										String nome = "";
+										System.out.println(nome.length());
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								## Concatenação
+								Utilize o operador + para agrupar strings e formar uma string mais longa.
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String name = "Edvan";
+										String message = "Hello, " + name;
+										System.out.println(message);
+
+										System.out.println("O nome foi: "+name);
+
+										System.out.println("Olá "+name+" !");
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								## Concatenação
+								O operador + concatena duas strings, desde que um dos argumentos,
+								à esquerda ou à direita de um operador + , seja uma string.
+
+								O outro argumento é automaticamente forçado a também se tornar
+								uma string para que ambas sejam concatenadas.
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String a = "Agent";
+										int n = 7;
+										String bond = a + n;
+										System.out.println(bond);
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								## Substring
+								Calcula substrings de uma string.
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String s = "Hello World";
+										//s.substring(start, pastEnd);
+										String sub1 = s.substring(0, 5); // sub é "Hello"
+										String sub2 = s.substring(6, 11); // sub é "World"
+
+										//Omitindo o segundo parâmetro
+										String sub3 = s.substring(6); // sub é "World"
+									}
+								}
+
+								```
+								Se você omitir o segundo parâmetro do método substring , então todos os caracteres
+								a partir da posição inicial até o fim da string são pegos.
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								## Divisão de String
+								Uso do "split"
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String frase = "java é demais";
+										String palavras[] = frase.split(" ");
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								## Maiúsculo
+								Uso do "toUpperCase"
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String frase = "java";
+										String maiusculas = frase.toUpperCase();
+										System.out.println(maiusculas);
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								## Minúsculas
+								Uso do "toLowerCase"
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String frase = "EXTENDS";
+										String minusculas = frase.toLowerCase();
+										System.out.println(minusculas);
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+						<section data-markdown data-background="image/mescla.jpg" class="transparent">
+							<script type="text/template">
+								## Modificação em toda String
+								Uso do "replace". <br/>
+								Retorna a string resultante da troca de "todas" as ocorrências do caractere "oldChar" pelo caractere "newChar".
+								```
+								public class Exemplo{
+
+									public static void main(String[] args) {
+										String frase = "EXTENDS";
+										String mod = frase.replace('E', 'I');
+										System.out.println(mod);
+									}
+								}
+
+								```
+							</script>
+						</section>
+
+					</section>
+
 
 			</div>
 
